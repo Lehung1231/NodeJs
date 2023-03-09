@@ -1,0 +1,13 @@
+{
+  "name": "we17304",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sever.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "we17304"
+  }
+}
