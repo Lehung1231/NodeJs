@@ -1,16 +1,15 @@
 import express from "express";
-import routerProduct from "./routes/product.js";
+import router from "./routes/index";
 import mongoose from "mongoose";
-import authRouter from "./routes/auth.js";
+import cors from "cors"
 import dotenv from "dotenv";
 dotenv.config();
 const app = express();
-
+app.use(cors())
 app.use(express.json());
 
 mongoose.connect(`${process.env.URI_DB}`);
+app.use("/api", router);
 
-app.use("/api", routerProduct);
-app.use("/api", authRouter);
 export const viteNodeApp = app;
 
